@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#donation-tab,
+#history-tab {
+    width: 150px;
+}
+
+.card-img-left {
+    border-radius: 0;
+    margin-right: 1rem;
+}
+
+.list-group-item {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer ul.list-inline li {
+    margin-right: 1rem;
+}
+
+footer ul.list-inline a:hover {
+    text-decoration: underline;
+}
+
+footer .border-light {
+    border-color: rgba(255, 255, 255, 0.1);
+}
