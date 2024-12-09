@@ -15,83 +15,92 @@
       rel="stylesheet"
     />
   </head>
+  <link rel="stylesheet" href="style.css">
 
   <body>
-    <header class="bg-light py-3">
-      <div class="container d-flex justify-content-between align-items-center">
-        <div>
-          <a href="./blog.html" class="btn btn-success">Blog</a>
+    <header id="navbar"  class="sticky-top">
+      <div class="bg-light py-3">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <div>
+            <a href="./blog.html" class="btn btn-success">Blog</a>
+          </div>
+          <div class="d-flex align-items-center">
+            <img src="./assets/logo.png" alt="Donate" width="30" class="me-2" />
+            <h5 class="m-0">Donate Bangladesh</h5>
+          </div>
+          <div>
+            <img src="./assets/coin.png" alt="Donate" width="20" class="me-2" />
+            <span class="text-warning fw-bold">
+              <span id="totalDonationAmount">5500</span> BDT
+            </span>
+          </div>
         </div>
-        <div class="d-flex align-items-center">
-          <img src="./assets/logo.png" alt="Donate" width="30" class="me-2" />
-          <h5 class="m-0">Donate Bangladesh</h5>
-        </div>
-        <div>
-          <img src="./assets/coin.png" alt="Donate" width="20" class="me-2" />
-          <span class="text-warning fw-bold"> <span id="totalDonationAmount">5500</span> BDT  </span>
+      </div>
+      <div>
+        <div class="d-flex justify-content-center mb-2 py-5 " style="background-color:rgba(230, 230, 250, 0.95);">
+          <button id="donation-tab" class="btn btn-success mx-2">
+            Donation
+          </button>
+          <button id="history-tab" class="btn btn-outline-success mx-2">
+            History
+          </button>
         </div>
       </div>
     </header>
 
     <main class="container mt-5">
-   
-
-
-
-
-
       <div class="modal" tabindex="-1" id="congratulationsModal">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
-              <h3  style="text-align: center; font-weight: bold;">Congratulations</h3>
+              <h3 style="text-align: center; font-weight: bold">
+                Congratulations
+              </h3>
 
-              <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 15px;">
-                <img src="./assets/coin.png" alt="" style="width: 30px;" />
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-bottom: 15px;
+                "
+              >
+                <img src="./assets/coin.png" alt="" style="width: 30px" />
               </div>
 
-              <p style="text-align: center;">You Have Donated for Humankind</p>
-              <h4 style="text-align: center; font-weight: bold;">Successfully</h4>
-           <div style="display: flex; justify-content: center;">
-    <button
-      type="button"
-      class="btn btn-secondary"
-      data-bs-dismiss="modal"
-      style="font-weight: bold;"
-    >
-      Close Confirmation
-    </button>
-  </div>
+              <p style="text-align: center">You Have Donated for Humankind</p>
+              <h4 style="text-align: center; font-weight: bold">
+                Successfully
+              </h4>
+              <div style="display: flex; justify-content: center">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                  style="font-weight: bold"
+                >
+                  Close Confirmation
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-  
-      <div class="d-flex justify-content-center">
-        <button id="donation-tab" class="btn btn-success mx-2">Donation</button>
-        <button id="history-tab" class="btn btn-outline-success mx-2">
-          History
-        </button>
-      </div>
-
-  
       <section id="donation-content" class="mt-4">
         <div class="row g-4" id="donationCards"></div>
       </section>
 
-
       <section id="history-content" class="mt-4 d-none">
-        <div class="list-group" id="donationHistory">
-        
-        </div>
+        <div class="list-group" id="donationHistory"></div>
       </section>
     </main>
 
     <footer class="bg-dark text-light py-4 mt-5">
       <div class="container">
         <div class="row">
-        
           <div class="col-md-4">
             <h5>About Us</h5>
             <p>
@@ -100,7 +109,7 @@
               contributions.
             </p>
           </div>
-     
+
           <div class="col-md-4">
             <h5>Contact</h5>
             <ul class="list-unstyled">
@@ -109,7 +118,7 @@
               <li>Address: Dhaka, Bangladesh</li>
             </ul>
           </div>
-      
+
           <div class="col-md-4">
             <h5>Follow Us</h5>
             <ul class="list-inline">
