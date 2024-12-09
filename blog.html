@@ -43,17 +43,14 @@
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
               aria-expanded="true" aria-controls="collapseOne">
-              What is the Document Object Model (DOM) ?
+              What is the Document Object Model (DOM)?
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               The DOM is a programming interface for web documents, representing the structure of HTML or XML as a tree
-              of nodes. It enables dynamic interaction with content, structure, and style. DOM represents
-              represents the page so that programs can
-              change the document structure, style, and content.
-              The DOM represents the document as nodes and objects; that way,
-              programming languages can interact with the page.
+              of nodes. It enables dynamic interaction with content, structure, and style. DOM represents the page so
+              that programs can change the document structure, style, and content.
             </div>
           </div>
         </div>
@@ -67,19 +64,18 @@
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
               There are several ways to select elements from the DOM in JavaScript. <br>
-              Can be select : <br>
+              Can be select: <br>
               1. getElementById (by id name) <br>
-              2. getElementsByClassName (by class Name ) <br>
+              2. getElementsByClassName (by class Name) <br>
               3. getElementsByTagName (by any tagName) <br>
-              4. querySelector (for any query like classname ) <br>
-              5. querySelectorAll (for multiple query ) <br>
-              Example:
-              let element = document.getElementById("myElement"); <br>
-              let elements = document.getElementsByClassName("myClass"); <br>
-              let elements = document.getElementsByTagName("div"); <br>
-              let element = document.querySelector(".myClass"); <br>
-              let elements = document.querySelectorAll("div.myClass");
-
+              4. querySelector (for any query like classname) <br>
+              5. querySelectorAll (for multiple queries) <br>
+              Example: <br>
+              <code>let element = document.getElementById("myElement");</code> <br>
+              <code>let elements = document.getElementsByClassName("myClass");</code> <br>
+              <code>let elements = document.getElementsByTagName("div");</code> <br>
+              <code>let element = document.querySelector(".myClass");</code> <br>
+              <code>let elements = document.querySelectorAll("div.myClass");</code>
             </div>
           </div>
         </div>
@@ -87,7 +83,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              What is event delegation in the context of the DOM , and why is it useful?
+              What is event delegation in the context of the DOM, and why is it useful?
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -95,30 +91,27 @@
               Event delegation is a technique in which a single event listener is attached to a parent element rather
               than individual child elements. The parent listens for events on its descendants and handles them
               accordingly. This works because events bubble up from the target element to its ancestors.
-
-              Event delegation is a JavaScript design pattern that attaches a single event listener to a parent element,
-              instead of attaching multiple listeners to individual child elements. It's useful because it improves
-              performance, simplifies event handling, and supports dynamic elements.
-
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               How do you manipulate an element's attributes and styles using the DOM?
             </button>
           </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              I can manipulate an element's attributes ans styles by attributes , styles , css classes.
-              by attributes (get attribute , set attribute , remove attribute), styles ( change style - using style
-              property , access style property), by css classes (by add class list, remove class , toggle class )
+              I can manipulate an element's attributes and styles by attributes, styles, and CSS classes.
+              By attributes (get attribute, set attribute, remove attribute), styles (change style using style
+              property),
+              and CSS classes (add class list, remove class, toggle class).
             </div>
           </div>
         </div>
       </div>
+
     </section>
 
   </main>
@@ -131,7 +124,7 @@
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
 
-    <script src="./script.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

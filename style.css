@@ -46,3 +46,90 @@ footer ul.list-inline a:hover {
 footer .border-light {
     border-color: rgba(255, 255, 255, 0.1);
 }
+
+@media (min-width: 320px) and (max-width: 1050px) {
+    #navbar .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar .container .d-flex {
+        justify-content: center;
+    }
+
+    #navbar .d-flex .me-2 {
+        margin-right: 0;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .py-5 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #donation-content .card {
+        flex-direction: column !important;
+        padding: 10px;
+    }
+
+    #donation-content .card-img-left {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    #donation-content .card-body {
+        padding: 15px;
+    }
+
+    .donationAmount,
+    .donateBtn {
+        width: 100%;
+    }
+
+    .ps-5 {
+        padding-left: 0px !important;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        margin-top: 10px !important;
+    }
+
+    .accordion-button {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .accordion-body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+
+    .accordion-header {
+        margin-bottom: 5px;
+    }
+
+    .accordion-collapse {
+        border-top: 1px solid #ddd;
+    }
+
+}

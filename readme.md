@@ -60,5 +60,5 @@
   - Change the button color to indicate when it's active. -->
 <!-- - **Static Modal**: Display a static modal instead of an alert on a successful donation. -->
 <!-- - **Reusable Functions**: Use at least 2 common functions. -->
-- **Responsive Design**: Ensure the application is responsive for different screen sizes.
+<!-- - **Responsive Design**: Ensure the application is responsive for different screen sizes. -->
 >

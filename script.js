@@ -55,22 +55,22 @@ const saveDonations = (donations) => localStorage.setItem('donations', JSON.stri
 function renderDonationCards() {
     const container = document.getElementById('donationCards');
     container.innerHTML = donationCampaigns.map((campaign, index) => `
-        <div class="card d-flex flex-row p-4" data-index="${index}">
-            <img src="${campaign.image}" class="card-img-left rounded shadow-lg" alt="Campaign Image"
-                style="width: 500px; height: 80%; object-fit: cover" />
-            <div class="card-body py-2 ps-5">
-                <span class="badge rounded-pill text-bg-secondary mb-3">
-                    <img src="./assets/coin.png" alt="" style="width: 20px; object-fit: cover" />
-                    <span class="campaign-amount">${campaign.amount}</span> <span>BDT</span>
-                </span>
-                <h5 class="card-title mb-3 fw-bold">${campaign.title}</h5>
-                <p class="card-text text-muted mb-2">${campaign.description}</p>
-                <div>
-                    <input type="text" class="form-control me-2 donationAmount w-100" placeholder="Write Donation Amount (BDT)" />
-                    <button class="w-100 mt-3 btn btn-success donateBtn">Donate Now</button>
-                </div>
-            </div>
-        </div>
+     <div class="card d-flex flex-row p-4" data-index="${index}">
+  <img src="${campaign.image}" class="card-img-left rounded shadow-lg" alt="Campaign Image"
+       style="width: 500px; height: 80%; object-fit: cover" />
+  <div class="card-body py-2 ps-5">
+    <span class="badge rounded-pill text-bg-secondary mb-3">
+      <img src="./assets/coin.png" alt="" style="width: 20px; object-fit: cover" />
+      <span class="campaign-amount">${campaign.amount}</span> <span>BDT</span>
+    </span>
+    <h5 class="card-title mb-3 fw-bold">${campaign.title}</h5>
+    <p class="card-text text-muted mb-2">${campaign.description}</p>
+    <div>
+      <input type="text" class="form-control me-2 donationAmount w-100" placeholder="Write Donation Amount (BDT)" />
+      <button class="w-100 mt-3 btn btn-success donateBtn">Donate Now</button>
+    </div>
+  </div>
+</div>
     `).join('');
     attachEventListeners();
 }
@@ -88,39 +88,39 @@ const updateDonationAmount = (campaignTitle, donationAmount) => {
 };
 
 
-let accountBalance = 5500; 
+let accountBalance = 5500;
 
 function handleDonation(campaignIndex) {
     const inputField = document.querySelectorAll('.donationAmount')[campaignIndex];
     const inputAmount = inputField.value.trim();
     const campaign = donationCampaigns[campaignIndex];
 
-  
+
     if (inputAmount === '') {
         alert("Please enter a donation amount.");
-        inputField.value = ''; 
-        return; 
+        inputField.value = '';
+        return;
     }
 
- 
+
     if (!/^\d+(\.\d+)?$/.test(inputAmount) || parseFloat(inputAmount) <= 0) {
         alert("Please enter a valid positive number.");
         inputField.value = '';
         return;
     }
 
-   
+
     const donationAmount = parseFloat(inputAmount);
     if (donationAmount > accountBalance) {
         alert("Insufficient balance. Please enter an amount less than or equal to your account balance.");
-        inputField.value = ''; 
-        return; 
+        inputField.value = '';
+        return;
     }
 
 
-    const formattedDate = new Date().toString(); 
+    const formattedDate = new Date().toString();
     const newDonation = {
-        title: campaign.title, 
+        title: campaign.title,
         amount: donationAmount,
         date: formattedDate
     };
@@ -135,8 +135,8 @@ function handleDonation(campaignIndex) {
 
     const totalElement = document.getElementById('totalDonationAmount');
     let currentTotal = parseFloat(totalElement.innerText) || 5500;
-    currentTotal -= donationAmount; 
-    totalElement.innerText = currentTotal >= 0 ? currentTotal : 0; 
+    currentTotal -= donationAmount;
+    totalElement.innerText = currentTotal >= 0 ? currentTotal : 0;
 
     accountBalance -= donationAmount;
     renderDonationHistory();
